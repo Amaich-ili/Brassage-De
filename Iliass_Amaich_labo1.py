@@ -38,7 +38,7 @@ cmd_3 = int(input("Entrer le nombre de l'état initial de deuxième dés : "))
 d = Dés(cmd_1, cmd_2, cmd_3)
 d1 = Dés()
 
-print(f"Instance 1 de la classe Dés :\nLe nombre de faces est : {d.info()[0]} \nle numero de Dé 1 est : {d.info()[1]} \net lnumero de Dé 2 est : {d.info()[2]}\n")
+print(f"\nInstance 1 de la classe Dés :\nLe nombre de faces est : {d.info()[0]} \nle numero de Dé 1 est : {d.info()[1]} \net lnumero de Dé 2 est : {d.info()[2]}\n")
 print(f"Instance 2 de la classe Dés :\nLe nombre de faces est : {d1.info()[0]} \nle numero de Dé 1 est : {d1.info()[1]} \net lnumero de Dé 2 est : {d1.info()[2]}\n")
 
 # Menu utilisateur 
@@ -47,8 +47,8 @@ def menu():
     while not condition:
         menu = int(input("1. Brasser les dés \n2. Comparer les dés \n3. Sortir \nEntrer votre choix : "))
         if menu == 1:
-            print(f"le numero sur le Dé 1 est : {d.brasser_aleatoire()[0]} , et lnumero sur le Dé 2 est : {d.brasser_aleatoire()[1]}")
-            print(f"le numero sur le  Dé 1 est : {d1.brasser_aleatoire()[0]} , et lnumero sur le Dé 2 est : {d1.brasser_aleatoire()[1]}")
+            print(f"le numero sur le Dé 1 est : {d.brasser_des()[0]} , et lnumero sur le Dé 2 est : {d.brasser_des()[1]}")
+            print(f"le numero sur le  Dé 1 est : {d1.brasser_des()[0]} , et lnumero sur le Dé 2 est : {d1.brasser_des()[1]}")
         elif menu == 2:
             print(d.comparer_des(d))
             # print(f"Le numero afficher dans les deux Dés respectivement sont : {d.comparer_des(d)}")
@@ -59,3 +59,4 @@ def menu():
             condition = True
         else:
             print(" Vous devez saisir un numero entre 1 et 3 ")
+menu()
