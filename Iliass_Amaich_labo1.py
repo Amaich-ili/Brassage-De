@@ -51,8 +51,6 @@ def menu():
             print(f"le numero sur le  Dé 1 est : {d1.brasser_des()[0]} , et lnumero sur le Dé 2 est : {d1.brasser_des()[1]}")
         elif menu == 2:
             print(d.comparer_des(d))
-            # print(f"Le numero afficher dans les deux Dés respectivement sont : {d.comparer_des(d)}")
-            # print(f"Le numero afficher dans les deux Dés respectivement sont : {d.comparer_des(d1)}")
         elif menu == 3:
             print("Bonne journée !")
             print("\n FIN DE PROGRAMME")
