@@ -8,4 +8,9 @@ class Dés:
         self.dé_1 = dé_1
         self.dé_2 = dé_2
 
+    def brasser_des(self):
+        self.dé_1 = randint(1, self.nb_face)
+        self.dé_2 = randint(1, self.nb_face)
+        return [self.dé_1, self.dé_2]
+
   
