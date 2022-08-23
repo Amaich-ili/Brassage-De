@@ -1,7 +1,7 @@
 """
 Iliass Amaich
 
-Un programme qui permet de brasser et de comparer les Dés
+Un programme qui permet de brasser et de comparer les Dés 
 """
 
 from random import randint
@@ -39,8 +39,10 @@ while not cdt1:
 cmd_2 = int(input("Entrer le nombre de l'état initial de premier dés : "))
 cmd_3 = int(input("Entrer le nombre de l'état initial de deuxième dés : "))
 
-# Utiliser les données introduits pour instancier la classe
+# Utiliser les données introduits par l'utilisateur pour instancier la classe
 d = Dés(cmd_1, cmd_2, cmd_3)
+
+# Instancier la classe par défaut 
 d1 = Dés()
 
 print(f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.info()[0]} \n\tle numero de Dé 1 est : {d.info()[1]} \n\tet lnumero de Dé 2 est : {d.info()[2]}\n")
