@@ -13,4 +13,10 @@ class Dés:
         self.dé_2 = randint(1, self.nb_face)
         return [self.dé_1, self.dé_2]
 
+    def comparer_des(self, d1):
+        if (self.dé_1 + self.dé_2) > (d1.dé_1 + d1.dé_2):
+            return True
+        else:
+            return False
+
   
