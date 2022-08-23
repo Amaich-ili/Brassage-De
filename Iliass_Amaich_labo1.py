@@ -33,3 +33,10 @@ while not cdt1:
 
 cmd_2 = int(input("Entrer le nombre de l'état initial de premier dés : "))
 cmd_3 = int(input("Entrer le nombre de l'état initial de deuxième dés : "))
+
+# Utiliser les données introduits pour instancier la classe
+d = Dés(cmd_1, cmd_2, cmd_3)
+d1 = Dés()
+
+print(f"Instance 1 de la classe Dés :\nLe nombre de faces est : {d.info()[0]} \nle numero de Dé 1 est : {d.info()[1]} \net lnumero de Dé 2 est : {d.info()[2]}\n")
+print(f"Instance 2 de la classe Dés :\nLe nombre de faces est : {d1.info()[0]} \nle numero de Dé 1 est : {d1.info()[1]} \net lnumero de Dé 2 est : {d1.info()[2]}\n")
