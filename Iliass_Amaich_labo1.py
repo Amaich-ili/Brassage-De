@@ -19,4 +19,5 @@ class Dés:
         else:
             return False
 
-  
+    def info(self):
+        return [self.nb_face,self.dé_1,self.dé_2]
