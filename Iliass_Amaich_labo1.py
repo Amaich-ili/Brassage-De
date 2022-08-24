@@ -1,7 +1,7 @@
 """
 Iliass Amaich
 
-Un programme qui permet de brasser et de comparer les Dés 
+Programme qui permet de brasser et de comparer les Dés 
 """
 
 from random import randint
@@ -18,7 +18,7 @@ class Dés:
         return [self.dé_1, self.dé_2]
 
     def comparer_des(self, d):
-        if (self.dé_1 + self.dé_2) > (d.dé_1 + d.dé_2):
+        if (self.dé_1 + self.dé_2) >= (d.dé_1 + d.dé_2):
             return True
         else:
             return False
