@@ -23,7 +23,7 @@ class Dés:
         else:
             return False
 
-    # afficher les information de la classe
+    # afficher les informations de la classe
     def info(self):
         return [self.nb_face,self.dé_1,self.dé_2]
 
@@ -45,8 +45,8 @@ d = Dés(cmd_1, cmd_2, cmd_3)
 # Instancier la classe par défaut 
 d1 = Dés()
 
-print(f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.info()[0]} \n\tle numero de Dé 1 est : {d.info()[1]} \n\tet lnumero de Dé 2 est : {d.info()[2]}\n")
-print(f"Instance 2 de la classe Dés :\n\tLe nombre de faces est : {d1.info()[0]} \n\tle numero de Dé 1 est : {d1.info()[1]} \n\tet lnumero de Dé 2 est : {d1.info()[2]}\n")
+print(f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.info()[0]} \n\tle numero sur le Dé 1 est : {d.info()[1]} \n\tet lnumero sur le Dé 2 est : {d.info()[2]}\n")
+print(f"Instance 2 de la classe Dés :\n\tLe nombre de faces est : {d1.info()[0]} \n\tle numero sur le Dé 1 est : {d1.info()[1]} \n\tet lnumero sur le Dé 2 est : {d1.info()[2]}\n")
 
 # Menu utilisateur 
 def menu():
@@ -57,7 +57,7 @@ def menu():
             print(f"le numero sur le Dé 1 est : {d.brasser_des()[0]} , et lnumero sur le Dé 2 est : {d.brasser_des()[1]}")
             print(f"le numero sur le  Dé 1 est : {d1.brasser_des()[0]} , et lnumero sur le Dé 2 est : {d1.brasser_des()[1]}")
         elif menu == 2:
-            print(d.comparer_des(d))
+            print(d.comparer_des(d1))
         elif menu == 3:
             print("Bonne journée !")
             print("\n FIN DE PROGRAMME")
