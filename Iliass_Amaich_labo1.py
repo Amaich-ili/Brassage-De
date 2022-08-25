@@ -19,9 +19,9 @@ class Dés:
 
     def comparer_des(self, d):
         if (self.dé_1 + self.dé_2) >= (d.dé_1 + d.dé_2):
-            return True
+                  print("La somme de votre Dé est superieur a celle de l'odinateur")
         else:
-            return False
+            print("La somme de votre Dé est inférieur  a celle de l'odinateur")
 
     # afficher les informations de la classe
     def info(self):
@@ -35,35 +35,37 @@ def menu():
     cdt1 = False
     while not cdt1:
         cmd_1 = int(input("Entrer le nombre de faces voulu : "))
-        if not 6 <= cmd_1 <= 24 :
+        if not 6 <= cmd_1 <= 24:
             print("Vous devez choisir un nombre de faces entre 6 et 24")
         else:
             cdt1 = True
 
-    while not cdt1:
+    cdt2 = False
+    while not cdt2:
         cmd_2 = int(input("Entrer le nombre de l'état initial de premier dés : "))
-        if not 0 <= cmd_2 <= cmd_1 :
+        if not 0 <= cmd_2 <= cmd_1:
             print(f"Vous devez choisir un nombre entre 0 et {cmd_1}")
         else:
-            cdt1 = True
+            cdt2 = True
 
-    while not cdt1:
+    cdt3 = False
+    while not cdt3:
         cmd_3 = int(input("Entrer le nombre de l'état initial de deuxième dés : "))
-        if not 0 <= cmd_3 <= cmd_1 :
+        if not 0 <= cmd_3 <= cmd_1:
             print(f"Vous devez choisir un nombre entre 0 et {cmd_1}")
         else:
-            cdt1 = True
-    
+            cdt3 = True
 
     # Utiliser les données introduits par l'utilisateur pour instancier la classe
     d = Dés(cmd_1, cmd_2, cmd_3)
 
-    # Instancier la classe par défaut 
+    # Instancier la classe par défaut
     d1 = Dés()
 
-    print(f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.info()[0]} \n\tle numero sur le Dé 1 est : {d.info()[1]} \n\tet lnumero sur le Dé 2 est : {d.info()[2]}\n")
-    print(f"Instance 2 de la classe Dés :\n\tLe nombre de faces est : {d1.info()[0]} \n\tle numero sur le Dé 1 est : {d1.info()[1]} \n\tet lnumero sur le Dé 2 est : {d1.info()[2]}\n")
-
+    print(
+        f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.info()[0]} \n\tle numero sur le Dé 1 est : {d.info()[1]} \n\tet lnumero sur le Dé 2 est : {d.info()[2]}\n")
+    print(
+        f"Instance 2 de la classe Dés :\n\tLe nombre de faces est : {d1.info()[0]} \n\tle numero sur le Dé 1 est : {d1.info()[1]} \n\tet lnumero sur le Dé 2 est : {d1.info()[2]}\n")
     
     # Deuxieme menu
     condition = False
@@ -73,7 +75,7 @@ def menu():
             print(f"le numero sur le Dé 1 est : {d.brasser_des()[0]} , et lnumero sur le Dé 2 est : {d.brasser_des()[1]}")
             print(f"le numero sur le  Dé 1 est : {d1.brasser_des()[0]} , et lnumero sur le Dé 2 est : {d1.brasser_des()[1]}")
         elif menu == 2:
-            print(d.comparer_des(d1))
+            d.comparer_des(d1)
         elif menu == 3:
             print("Bonne journée !")
             print("\n FIN DE PROGRAMME")
