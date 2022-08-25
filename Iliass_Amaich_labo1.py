@@ -13,8 +13,8 @@ class Dés:
         self.dé_2 = dé_2
 
     def brasser_des(self):
-        self.dé_1 = randint(6, self.nb_face)
-        self.dé_2 = randint(6, self.nb_face)
+        self.dé_1 = randint(6, 24)
+        self.dé_2 = randint(6, 24)
         return [self.dé_1, self.dé_2]
 
     def comparer_des(self, d):
