@@ -13,6 +13,7 @@ class Dés:
         self.dé_2 = dé_2
 
     def brasser_des(self):
+        #Ton brasse doit être dépendant du nombre de faces de ton dés.
         self.dé_1 = randint(6, 24)
         self.dé_2 = randint(6, 24)
         return [self.dé_1, self.dé_2]
@@ -49,17 +50,20 @@ def menu():
 
     cdt3 = False
     while not cdt3:
+        #valeur_2
+        #de_2
+        #Donner un nom indicatif
         cmd_3 = int(input("Entrer le nombre de l'état initial de deuxième dés : "))
         if not 0 <= cmd_3 <= cmd_1:
             print(f"Vous devez choisir un nombre entre 0 et {cmd_1}")
         else:
             cdt3 = True
-
+    #cmd1,2 et 3 n'indique pas assez d'informaton.
     # Utiliser les données introduits par l'utilisateur pour instancier la classe
     d = Dés(cmd_1, cmd_2, cmd_3)
 
     # Instancier la classe par défaut
-    d1 = Dés()
+    d1 = Dés()#Utiliser le même nombre de face que le dé de l'utilisateur
 
     print(
         f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.info()[0]} \n\tle numero sur le Dé 1 est : {d.info()[1]} \n\tet lnumero sur le Dé 2 est : {d.info()[2]}\n")
