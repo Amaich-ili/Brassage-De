@@ -27,6 +27,7 @@ class Dés:
     def info(self):
         return [self.nb_face,self.dé_1,self.dé_2]
 
+#Pas de code en exécution normale svp. Sauf l'appel du menu. Surtout pas avant une définition de fonction
 # Demander à l'utilisateur de saisir les attributs de la classe(nombre de faces,l'état initial de premier dés,l'état initial de deuxième dés )
 cdt1 = False
 while not cdt1:
@@ -50,6 +51,7 @@ print(f"Instance 2 de la classe Dés :\n\tLe nombre de faces est : {d1.info()[0]
 
 # Menu utilisateur 
 def menu():
+    #methode du premier menu
     condition = False
     while not condition:
         menu = int(input("1. Brasser les dés \n2. Comparer les dés \n3. Sortir \nEntrer votre choix : "))
