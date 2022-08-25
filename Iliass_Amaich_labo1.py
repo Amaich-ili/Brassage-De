@@ -13,8 +13,8 @@ class Dés:
         self.dé_2 = dé_2
 
     def brasser_des(self):
-        self.dé_1 = randint(1, self.nb_face)
-        self.dé_2 = randint(1, self.nb_face)
+        self.dé_1 = randint(6, self.nb_face)
+        self.dé_2 = randint(6, self.nb_face)
         return [self.dé_1, self.dé_2]
 
     def comparer_des(self, d):
@@ -27,29 +27,45 @@ class Dés:
     def info(self):
         return [self.nb_face,self.dé_1,self.dé_2]
 
-# Demander à l'utilisateur de saisir les attributs de la classe(nombre de faces,l'état initial de premier dés,l'état initial de deuxième dés )
-cdt1 = False
-while not cdt1:
-    cmd_1 = int(input("Entrer le nombre de faces voulu : "))
-    if not 6 <= cmd_1 <= 24 :
-        print("Vous devez choisir un nombre de faces entre 6 et 24")
-    else:
-        cdt1 = True
-
-cmd_2 = int(input("Entrer le nombre de l'état initial de premier dés : "))
-cmd_3 = int(input("Entrer le nombre de l'état initial de deuxième dés : "))
-
-# Utiliser les données introduits par l'utilisateur pour instancier la classe
-d = Dés(cmd_1, cmd_2, cmd_3)
-
-# Instancier la classe par défaut 
-d1 = Dés()
-
-print(f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.info()[0]} \n\tle numero sur le Dé 1 est : {d.info()[1]} \n\tet lnumero sur le Dé 2 est : {d.info()[2]}\n")
-print(f"Instance 2 de la classe Dés :\n\tLe nombre de faces est : {d1.info()[0]} \n\tle numero sur le Dé 1 est : {d1.info()[1]} \n\tet lnumero sur le Dé 2 est : {d1.info()[2]}\n")
 
 # Menu utilisateur 
 def menu():
+
+    # Premier menu
+    cdt1 = False
+    while not cdt1:
+        cmd_1 = int(input("Entrer le nombre de faces voulu : "))
+        if not 6 <= cmd_1 <= 24 :
+            print("Vous devez choisir un nombre de faces entre 6 et 24")
+        else:
+            cdt1 = True
+
+    while not cdt1:
+        cmd_2 = int(input("Entrer le nombre de l'état initial de premier dés : "))
+        if not 0 <= cmd_2 <= cmd_1 :
+            print(f"Vous devez choisir un nombre entre 0 et {cmd_1}")
+        else:
+            cdt1 = True
+
+    while not cdt1:
+        cmd_3 = int(input("Entrer le nombre de l'état initial de deuxième dés : "))
+        if not 0 <= cmd_3 <= cmd_1 :
+            print(f"Vous devez choisir un nombre entre 0 et {cmd_1}")
+        else:
+            cdt1 = True
+    
+
+    # Utiliser les données introduits par l'utilisateur pour instancier la classe
+    d = Dés(cmd_1, cmd_2, cmd_3)
+
+    # Instancier la classe par défaut 
+    d1 = Dés()
+
+    print(f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.info()[0]} \n\tle numero sur le Dé 1 est : {d.info()[1]} \n\tet lnumero sur le Dé 2 est : {d.info()[2]}\n")
+    print(f"Instance 2 de la classe Dés :\n\tLe nombre de faces est : {d1.info()[0]} \n\tle numero sur le Dé 1 est : {d1.info()[1]} \n\tet lnumero sur le Dé 2 est : {d1.info()[2]}\n")
+
+    
+    # Deuxieme menu
     condition = False
     while not condition:
         menu = int(input("1. Brasser les dés \n2. Comparer les dés \n3. Sortir \nEntrer votre choix : "))
