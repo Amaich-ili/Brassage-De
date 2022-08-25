@@ -19,9 +19,9 @@ class Dés:
 
     def comparer_des(self, d):
         if (self.dé_1 + self.dé_2) >= (d.dé_1 + d.dé_2):
-            print("La somme de votre Dés est superieur à celle de l'odinateur")
+            print("\n\tLa somme de votre Dés est superieur à celle de l'odinateur\n")
         else:
-            print("La somme de votre Dés est inférieur à celle de l'odinateur")
+            print("\n\tLa somme de votre Dés est inférieur à celle de l'odinateur\n")
 
     # afficher les informations de la classe
     def info(self):
