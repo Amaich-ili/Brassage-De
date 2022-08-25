@@ -27,7 +27,6 @@ class Dés:
     def info(self):
         return [self.nb_face,self.dé_1,self.dé_2]
 
-
 # Menu utilisateur 
 def menu():
 
