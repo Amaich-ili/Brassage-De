@@ -19,9 +19,9 @@ class Dés:
 
     def comparer_des(self, d):
         if (self.dé_1 + self.dé_2) >= (d.dé_1 + d.dé_2):
-            print("\n\tLa somme de votre Dés est superieur ou égale à celle de l'odinateur\n")
+            print("\n\tLa somme de votre Dés est superieur ou égale à celle de l'ordinateur\n")
         else:
-            print("\n\tLa somme de votre Dés est inférieur à celle de l'odinateur\n")
+            print("\n\tLa somme de votre Dés est inférieur à celle de l'ordinateur\n")
 
     # afficher les informations de la classe
     def info(self):
@@ -71,8 +71,10 @@ def menu():
     while not condition:
         menu = int(input("1. Brasser les dés \n2. Comparer les dés \n3. Sortir \nEntrer votre choix : "))
         if menu == 1:
-            print(f"le numero sur le Dé 1 est : {d.brasser_des()[0]} , et le numero sur le Dé 2 est : {d.brasser_des()[1]}")
-            print(f"le numero sur le  Dé 1 est : {d1.brasser_des()[0]} , et le 1numero sur le Dé 2 est : {d1.brasser_des()[1]}")
+            resultat = d.brasser_des()
+            resultat1 = d1.brasser_des()
+            print(f"le numero sur le Dé 1 est : {resultat[0]} , et le numero sur le Dé 2 est : {resultat[1]}")
+            print(f"le numero sur le  Dé 1 est : {resultat1[0]} , et le 1numero sur le Dé 2 est : {resultat1[1]}")
         elif menu == 2:
             d.comparer_des(d1)
         elif menu == 3:
