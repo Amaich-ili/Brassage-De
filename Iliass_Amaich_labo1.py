@@ -16,16 +16,11 @@ class Dés:
         self.dé_1 = randint(1, self.nb_face)
         self.dé_2 = randint(1, self.nb_face)
         
-
     def comparer_des(self, d):
         if (self.dé_1 + self.dé_2) >= (d.dé_1 + d.dé_2):
             print("\n\tLa somme de votre Dés est superieur ou égale à celle de l'ordinateur\n")
         else:
             print("\n\tLa somme de votre Dés est inférieur à celle de l'ordinateur\n")
-
-    # afficher les informations de la classe
-    def info(self):
-        return [self.nb_face,self.dé_1,self.dé_2]
 
 # Menu utilisateur 
 def menu():
@@ -62,9 +57,9 @@ def menu():
     d1 = Dés(nombre_face)
 
     print(
-        f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.info()[0]} \n\tle numero sur le Dé 1 est : {d.info()[1]} \n\tet lnumero sur le Dé 2 est : {d.info()[2]}\n")
+        f"\nInstance 1 de la classe Dés :\n\tLe nombre de faces est : {d.nb_face} \n\tle numero sur le Dé 1 est : {d.dé_1} \n\tet lnumero sur le Dé 2 est : {d.dé_2}\n")
     print(
-        f"Instance 2 de la classe Dés :\n\tLe nombre de faces est : {d1.info()[0]} \n\tle numero sur le Dé 1 est : {d1.info()[1]} \n\tet lnumero sur le Dé 2 est : {d1.info()[2]}\n")
+        f"Instance 2 de la classe Dés :\n\tLe nombre de faces est : {d1.nb_face} \n\tle numero sur le Dé 1 est : {d1.dé_1} \n\tet lnumero sur le Dé 2 est : {d1.dé_2}\n")
     
     # Deuxieme menu
     condition = False
