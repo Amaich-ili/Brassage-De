@@ -13,9 +13,9 @@ class Dés:
         self.dé_2 = dé_2
 
     def brasser_des(self):
-        self.dé_1 = randint(6, self.nb_face)
-        self.dé_2 = randint(6, self.nb_face)
-        return [self.dé_1, self.dé_2]
+        self.dé_1 = randint(1, self.nb_face)
+        self.dé_2 = randint(1, self.nb_face)
+        
 
     def comparer_des(self, d):
         if (self.dé_1 + self.dé_2) >= (d.dé_1 + d.dé_2):
@@ -71,10 +71,10 @@ def menu():
     while not condition:
         menu = int(input("1. Brasser les dés \n2. Comparer les dés \n3. Sortir \nEntrer votre choix : "))
         if menu == 1:
-            resultat = d.brasser_des()
-            resultat1 = d1.brasser_des()
-            print(f"le numero sur le Dé 1 est : {resultat[0]} , et le numero sur le Dé 2 est : {resultat[1]}")
-            print(f"le numero sur le  Dé 1 est : {resultat1[0]} , et le 1numero sur le Dé 2 est : {resultat1[1]}")
+            d.brasser_des()
+            d1.brasser_des()
+            print(f"le numero sur le Dé 1 est : {d.dé_1} , et le numero sur le Dé 2 est : {d.dé_2}")
+            print(f"le numero sur le  Dé 1 est : {d1.dé_1} , et le 1numero sur le Dé 2 est : {d1.dé_2}")
         elif menu == 2:
             d.comparer_des(d1)
         elif menu == 3:
