@@ -4,6 +4,7 @@ Iliass Amaich
 Programme qui permet de brasser et de comparer les Dés 
 """
 
+from ast import main
 from random import randint
 
 class Dés:
@@ -78,4 +79,5 @@ def menu():
             condition = True
         else:
             print(" Vous devez saisir un numero entre 1 et 3 ")
+
 menu()
