@@ -1,6 +1,5 @@
 """
 Iliass Amaich
-
 Programme qui permet de brasser et de comparer les Dés 
 """
 
